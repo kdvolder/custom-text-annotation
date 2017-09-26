@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.editors.annotationTypes">
+      <type name="org.springframework.tooling.bootinfo"></type>
+   </extension>
+   <extension point="org.eclipse.ui.editors.markerAnnotationSpecification">
+		<specification
+        annotationType="org.springframework.tooling.bootinfo"
+        colorPreferenceKey="STSBootReadOccurrenceIndicationColor"
+        colorPreferenceValue="242,13,13"
+        contributesToHeader="false"
+        highlightPreferenceKey="STSBootReadOccurrenceHighlighting"
+        highlightPreferenceValue="true"
+        icon="icons/boot-icon.png"
+        label="Boot Dynamic Info"
+        overviewRulerPreferenceKey="STSBootReadOccurrenceIndicationInOverviewRuler"
+        overviewRulerPreferenceValue="true"
+        presentationLayer="4"
+        showInNextPrevDropdownToolbarAction="true"
+        textPreferenceKey="STSBootReadOccurrenceIndication"
+        textPreferenceValue="false"
+        textStylePreferenceKey="STSBootReadOccurrenceTextStyle"
+        textStylePreferenceValue="NONE"
+        verticalRulerPreferenceKey="STSBootReadOccurrenceIndicationInVerticalRuler"
+        verticalRulerPreferenceValue="true">
+		</specification>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.github.kdvolder.custommarker.SomeInitializer">
+      </startup>
+   </extension>
+
+</plugin>
